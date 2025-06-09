@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tours</title><link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/lightslider.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/fontawesome.min.css">
+    <link rel="website icon" type="png" href="../static/images/logo3.png">
+
+
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/jquery.js"></script>
+    <script src="../static/js/lightslider.js"></script>
+    <script src="../static/js/script.js"></script>
+    <style>
+        .button-container {
+            text-align: center;
+        }
+        
+        .button {
+            /* Add your button styles here */
+            /* Example styles */
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #62583B;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+        }
+        
+    </style>
+        
+</head>
+<body>
+    {% include "navbar.html" %}
+    <div class="container-fluid">
+        <div class="card-shadow">
+        <section class="row">
+            <h2>Nairobi Day Trip</h2>
+            <p>
+            Nairobi National Park: A wildlife sanctuary at the heart of Kenya's capital. Encounter lions, giraffes, and more against Nairobi's skyline. Enjoy a morning game drive, picnic breakfast, and guided tours. Experience the wild within the city on a memorable day trip.
+            </p>
+
+
+        </section>
+        <br>
+        <section class="row">
+            <img src="../static/images/nairobinationalpark.jpg" alt="" width="1300" height="500">
+        </section>
+        <section id="nairobi" class="row">
+            <h3>Nairobi national park day Trip</h3>
+            <p> 
+                1.Pick up from your city hotel in the morning drive to Nairobi National Park going straight for game drive until lunch time when you will have your lunch at the carnivore restaurant. <br>
+                2.The park is only a few kilometres from the city centre. <br>
+                
+                    Of the big five, only the elephant is absent.
+                    The Nairobi National Park is only 7km from Nairobi City centre. The small park (113sq. km)
+                    contains all the major animal species with the exception of the Elephant.
+                    <br>
+                        The sight of wildlife grazing majestically against the backdrop of the city skyline is a pleasant
+                        experience. After lunch visit the Nairobi Animal Orphanage, founded in 1963 to provide a
+                        home for injured and orphaned, founded young animals, Here the animals are nursed to
+                        good health and then released back to the wild. <br>
+                3.Later in the evening drive back to your respective hotel for diner and overnight.
+            </p>
+        </section>
+        <div class="button-container">
+            <a href="/requestquote">
+                <button class="button">Request A Quote</button>
+            </a>
+        </div>
+        <br>
+    </div>
+    </div>
+    
+    {% include "footer.html" %}
+</body>
+</html>

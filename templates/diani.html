@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tours</title><link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/lightslider.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/fontawesome.min.css">
+    <link rel="website icon" type="png" href="../static/images/logo3.png">
+
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/jquery.js"></script>
+    <script src="../static/js/lightslider.js"></script>
+    <script src="../static/js/script.js"></script>
+    <style>
+        .button-container {
+            text-align: center;
+        }
+        
+        .button {
+            /* Add your button styles here */
+            /* Example styles */
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #62583B;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+        }
+        
+    </style>
+
+</head>
+<body>
+    {% include "navbar.html" %}
+    <div class="container-fluid">
+        <section class="row">
+           <h2>Diani beach</h2> 
+            <p> Just south of Mombasa is the famous Diani beach, one of the most renowned on the
+                East African Coast, with its long, soft, white sand making it a tropical paradise. There
+                is also an offshore reef which is ideal for snorkelling and as this also keeps the
+                waves low it is an ideal beach for paddling and swimming. Diani beach is suitable for
+                honeymooners, families and watersports enthusiasts. From the end of June through
+                December, humpback whales migrate along the Kenyan coast. There are also many
+                exclusive hotels situated on the beach.
+            </p>  
+        </section>
+        <br>
+        <section class="row">
+            <h2>Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15914.830025133579!2d39.58446969743809!3d-4.276956631150834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1840463f2a0b107d%3A0xafa0063ab0f439ad!2sDiani%20Beach!5e0!3m2!1sen!2ske!4v1714386194097!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <br>
+        <div class="button-container">
+            <a href="/requestquote">
+                <button class="button">Request A Quote</button>
+            </a>
+        </div>
+        <br>
+    </div>
+    
+    {% include "footer.html" %}
+</body>
+</html>

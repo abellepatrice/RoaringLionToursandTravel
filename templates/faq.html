@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title><link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/lightslider.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/fontawesome.min.css">
+    <link rel="website icon" type="png" href="../static/images/logo3.png">
+
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/jquery.js"></script>
+    <script src="../static/js/lightslider.js"></script>
+    <script src="../static/js/script.js"></script>
+    <style>
+        .faq-container {
+            max-width: 1300px;
+            margin: 50px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .faq-question {
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .faq-answer {
+            display: none;
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    {% include "navbar.html" %}
+    <div class="container-fluid">
+        <section class="row">
+            <div id="faq-container" class="faq-container lead fs-5 mt-4 text-start">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer('answer1')">1. What is a tour and travel agency?</div>
+                    <div class="faq-answer" id="answer1">- A tour and travel agency is a company or organization that specializes in providing travel-related services to individuals or groups. These services may include booking flights, accommodations, transportation, tours, and activities, as well as providing assistance with travel documentation and other logistical arrangements.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer('answer2')">2. What services do a tour and travel agency offer?</div>
+                    <div class="faq-answer" id="answer2">- Tour and travel agencies offer a wide range of services to facilitate travel experiences. These services may include booking flights, hotels, transportation (such as car rentals or transfers), arranging tours and activities, providing travel insurance, handling visa applications, and offering personalized travel advice and recommendations.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer('answer3')">3. What is a tour package?</div>
+                    <div class="faq-answer" id="answer3">- A tour package is a pre-designed travel itinerary that includes various components such as transportation, accommodations, meals, tours, and activities, offered at a fixed price. Tour packages are often tailored to specific destinations or themes and are designed to provide travelers with a convenient and hassle-free way to explore a destination, allowing them to focus on enjoying their trip without worrying about the details of planning and booking.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer('answer4')">4. What are the most popular tour packages in Kenya?</div>
+                    <div class="faq-answer" id="answer4">- Some of the most popular tour packages in Kenya include safaris to national parks and game reserves such as Maasai Mara, Amboseli, Tsavo, and Samburu. Other popular packages include beach holidays along the coast of Mombasa, cultural tours to visit tribes like the Maasai and Samburu, and adventure activities such as hiking Mount Kenya or hot air balloon safaris.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer('answer5')">5. What is the role of a tour travel operator?</div>
+                    <div class="faq-answer" id="answer5">- A tour travel operator plays a crucial role in organizing and coordinating travel experiences for clients. Their responsibilities may include designing and developing tour packages, negotiating with suppliers (such as hotels and transportation companies), managing bookings and reservations, ensuring the smooth operation of tours and activities, providing assistance and support to travelers during their trip, and handling any issues or emergencies that may arise.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer('answer6')">6. What are some of the top tour and travel destinations in Kenya?</div>
+                    <div class="faq-answer" id="answer6">- Kenya offers a diverse range of travel destinations, including iconic national parks and reserves such as Maasai Mara, Amboseli, Tsavo, and Lake Nakuru, known for their abundant wildlife and spectacular landscapes. Other popular destinations include the coastal region of Mombasa, with its beautiful beaches and vibrant culture, the scenic Rift Valley, home to attractions like Lake Naivasha and Hell's Gate National Park, and Mount Kenya, Africa's second-highest peak, offering opportunities for trekking and adventure.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer('answer7')">7. What types of adventures does Roaring Lion Tours and Travel offer?</div>
+                    <div class="faq-answer" id="answer7">- Roaring Lion Tours and Travel offers a diverse range of adventures for 2024, including exotic wildlife safaris, cultural immersion journeys, and historical explorations. Their expert guides and unparalleled service ensure unforgettable experiences for adventurers of all ages.</div>
+                </div>
+                <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer('answer8')">8. How does Roaring Lion Tours and Travel prioritize sustainability and responsible tourism?</div>
+                        <div class="faq-answer" id="answer8">- Roaring Lion Tours and Travel is committed to sustainability and responsible tourism practices. They focus on preserving the planet's natural beauty for future generations and empower communities through corporate social responsibility programs, providing water and sanitation facilities to local communities.</div>
+                </div>
+                <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer('answer9')">9. How does Roaring Lion Tours and Travel ensure the safety of their guests?</div>
+                        <div class="faq-answer" id="answer9">- Roaring Lion Tours and Travel prioritizes the safety and well-being of their guests by implementing rigorous health and safety protocols in accordance with global guidelines. These measures include enhanced sanitation practices and flexible booking policies, ensuring a safe and worry-free travel experience for all travelers.</div>
+                </div>
+                                
+            </div>
+            
+        </section>
+        <script>
+            // JavaScript to toggle FAQ answers
+            const faqQuestions = document.querySelectorAll('.faq-question');
+        
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+                });
+            });
+        </script>
+        <!-- <script>
+            function toggleAnswer(answerId) {
+                var answer = document.getElementById(answerId);
+                if (answer.style.display === "block") {
+                    answer.style.display = "none";
+                } else {
+                    answer.style.display = "block";
+                }
+            }
+        </script> -->
+        
+
+    </div>
+    
+    {% include "footer.html" %}
+</body>
+</html>

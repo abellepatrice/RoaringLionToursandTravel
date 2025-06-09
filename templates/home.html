@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Roaring Lion Tours and Travel</title>
+        <link rel="stylesheet" href="../static/css/bootstrap.css">
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/css/lightslider.css">
+        <link rel="stylesheet" href="../static/css/style.css">
+        <link rel="website icon" type="png" href="../static/images/logo3.png">
+        
+        <script src="../static/js/bootstrap.bundle.min.js"></script>
+        <script src="../static/js/jquery.js"></script>
+        <script src="../static/js/lightslider.js"></script>
+        <style>
+            .container {
+                position: relative;
+                width: 500px;
+            }
+
+            .image {
+                width: 100%;
+                height: auto;
+            }
+
+            .text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+                font-size: 24px;
+                font-family: Arial, sans-serif;
+                text-align: center;
+            }
+
+            .logo {
+                width: 200px;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+
+            .faq-container {
+                max-width: 1300px;
+                margin: 50px auto;
+                padding: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .faq-question {
+                cursor: pointer;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            .faq-answer {
+                display: none;
+                margin-bottom: 20px;
+            }
+
+            .button-container {
+                text-align: center;
+            }
+
+            .button {
+                /* Add your button styles here */
+                /* Example styles */
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #62583B;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                font-size: 16px;
+                border-radius: 4px;
+                border: none;
+                cursor: pointer;
+            }
+
+            h2 {
+                color: A6904D;
+            }
+
+            h3 {
+                color: A6904D;
+            }
+        </style>
+        <link rel="stylesheet" href="../static/css/fontawesome.min.css">
+
+    </head>
+
+    <body>
+        {% include "navbar.html" %}
+        <div class="container-fluid">
+            <section>
+                <h2 class="display-4 text-center h2"> Welcome to Roaring Lion Tours and Travel</h2>
+                {% include "carousel.html" %}
+            </section>
+            <br>
+            <section>
+                <h3 class="display-5 text-center">Roaring Lion Tours and Travel</h3>
+                <p class="lead fs-5 mt-4 text-center">
+                    We are a reliable tour operator based in Nairobi Kenya aiming at providing bespoke travel
+                    experiences to our clients by offering tours that expose travellers to the magnificent, scenic and
+                    natural beauty of East Africa. This while experiencing the rich history, cultural diversity and
+                    varied culinary tradition.
+                    We delight in designing exciting customised itineraries in the East African region for families,
+                    groups and even individuals. Our aim is to provide you with the ultimate safari experience through
+                    interesting and engaging activities such as game drives, hiking trips, Bush walks, boat rides, water
+                    sports and even horse riding in the wild. <br>
+                    We take great pride in making trip and safari planning process a breeze with great attention to
+                    detail prompt response and impeccable service. Whether you are looking for a honeymoon safari, beach
+                    holiday, wildlife adventure, camping expedition...name it. We are your safari partner.
+                    We are passionate about travelling and love creating good memories for clients, therefore we
+                    dedicate ourselves to giving you outstanding service, personalised attention throughout your safari
+                    and ensuring that you get value for your money and the best holiday ever. <br>
+                </p>
+                <h4 class="text-center">"Experience Your Travel Dreams"</h4>
+            </section>
+            <br>
+            <section class="row">
+                <h3 class="display-5 text-center">Some of the travel destinations for your holiday</h3>
+                <div class="col-md-4">
+                    <div class="card-shadow">
+                        <a href="/amboseli">
+                            <img src="../static/images/amboseli1.jpg" alt="" width="430" height="300">
+                        </a>
+                        <h5>Amboseli National Park</h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-shadow">
+                        <a href="/lakenakuru">
+                            <img src="../static/images/lakenakuru.jpg" alt="sunsetXlion.jpg" width="430" height="300">
+                        </a>
+                        <h5>Lake Nakuru</h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-shadow">
+                        <a href="/nairobinationalpark" width="430" height="300">
+                            <img src="../static/images/nairobinationalpark.jpg" alt="sunsetXlion.jpg" width="430"
+                                height="300">
+                        </a>
+                        <h5>Nairobi National Park</h5>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <!-- <section class="row">
+            <div class="col-md-4">
+                <div class="card-shadow">
+                    <a href="southisland">
+                        <img src="../static/images/southislandnationalpark.jpg" alt=""  width="430" height="300">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-shadow">
+                    <a href="/mountkenya">
+                        <img src="../static/images/mountkenya.jpg" alt=""  width="430" height="300">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-shadow">
+                    <a href="/sibiloi">
+                           <img src="../static/images/sibiloi.jpg" alt=""  width="430" height="300">
+                    </a>
+                </div>
+            </div>
+        </section>  -->
+            <h3 class="display-6 text-center">Some of the day trips you can enjoy with us</h3>
+            <section class="row">
+                <div class="col-md-4">
+                    <a href="/nakurudaytrip">
+                        <img src="../static/images/daytrips.jpg" alt="" width="430" height="300">
+                    </a>
+                    <h5>Lake Nakuru Day Trip</h5>
+                </div>
+                <div class="col-md-4">
+                    <a href="/nairobidaytrip">
+                        <img src="../static/images/gateaway.jpg" alt="" width="430" height="300">
+                    </a>
+                    <h5>Nairobi National Park Day Trip</h5>
+                </div>
+                <div class="col-md-4">
+                    <a href="/naivashadaytrip">
+                        <img src="../static/images/kenyagateaway.jpg" alt="" width="430" height="300">
+                    </a>
+                    <h5>Lake Naivasha Day Trip</h5>
+
+                </div>
+            </section>
+
+            <h3 class="display-6 text-center">Some of the beach tours</h3>
+            <section class="row">
+                <div class="col-md-4">
+                    <a href="/malindi">
+                        <img src="../static/images/malindi1.jpg" alt="" width="430" height="300">
+                    </a>
+                    <h5>Malindi Beach </h5>
+                </div>
+                <div class="col-md-4">
+                    <a href="/mombasa">
+                        <img src="../static/images/mombasa1.jpg" alt="" width="430" height="300">
+                    </a>
+                    <h5>Mombasa Beach </h5>
+                </div>
+                <div class="col-md-4">
+                    <a href="/lamu">
+                        <img src="../static/images/lamu1.jpg" alt="" width="430" height="300">
+                    </a>
+                    <h5>Lamu Beach </h5>
+                </div>
+            </section>
+
+            <section class="row">
+                <h2 class="text-center">Kenya</h2>
+                <p class="lead fs-5 mt-4 text-center">
+                    Kenya is a realm of unspoiled beauty, where nature's grandeur unfolds in a breathtaking tapestry of
+                    wilderness. Within its borders lie treasures that captivate the soul and ignite the spirit of
+                    adventure. Nairobi National Park beckons, a sanctuary where skyscrapers stand sentinel over lions
+                    roaming against an urban backdrop. Traverse to Amboseli, where the majestic Kilimanjaro presides
+                    over vast plains adorned with elephant herds and acacia trees. Delve into the Maasai Mara, where the
+                    Great Migration unfolds in a timeless spectacle of life and survival. Discover the flamingo-painted
+                    shores of Lake Nakuru and the tranquil waters of Lake Naivasha. Kenya beckons, a land of wonder
+                    awaiting exploration and discovery at every turn, and so much more.
+                </p>
+                <h2 class="text-center">Uganda</h2>
+                <p class="lead fs-5 mt-4 text-center">
+                    Uganda, a jewel of East Africa, unveils a landscape of boundless wonder and natural splendor. Queen
+                    Elizabeth National Park sprawls across the horizon, where iconic tree-climbing lions roam amidst the
+                    savannah and the mystical Kyambura Gorge beckons. Journey northward to witness the awe-inspiring
+                    Murchison Falls, where the Nile River plunges through a narrow gorge in a thunderous display of
+                    power and beauty. Delve into the ancient realms of Bwindi Impenetrable Forest, where mist-shrouded
+                    peaks shelter endangered mountain gorillas, offering a rare encounter with our gentle cousins. Then,
+                    wander to the remote wilderness of Kidepo Valley, where untamed landscapes and diverse wildlife
+                    flourish amid rugged beauty. Uganda invites you to explore its wonders and embark on an
+                    unforgettable journey of discovery.
+                </p>
+                <h2 class="text-center">Tanzania</h2>
+                <p class="lead fs-5 mt-4 text-center">
+                    Tanzania, a land of untamed beauty and breathtaking landscapes, invites you to embark on an
+                    extraordinary adventure. Begin your journey in the legendary Serengeti, where the endless plains
+                    come alive with the Great Migration, a spectacle of wildebeests and zebras thundering across the
+                    savannah. Descend into the Ngorongoro Crater, a natural amphitheater teeming with wildlife and
+                    framed by towering walls, offering an unparalleled safari experience. Explore the lush forests and
+                    shimmering waters of Lake Manyara, home to diverse birdlife and iconic tree-climbing lions. Then,
+                    venture into the rugged terrain of Tarangire, where ancient baobab trees stand sentinel over vast
+                    herds of elephants. Finally, gaze in awe at the majestic Mount Kilimanjaro, Africa's tallest peak,
+                    its snow-capped summit beckoning adventurers from around the world. Tanzania promises an
+                    unforgettable journey of discovery and wonder.
+                </p>
+                <h2 class="text-center">Rwanda</h2>
+                <p class="lead fs-5 mt-4 text-center">
+                    Rwanda, a land of profound beauty and resilience, offers a journey filled with diverse experiences
+                    and poignant history. Explore the vast plains and shimmering lakes of Akagera National Park, where
+                    majestic wildlife roams against a backdrop of stunning landscapes. Delve into the lush greenery of
+                    Nyungwe Forest, where ancient trees hide rare primates and vibrant birdlife. Relax on the tranquil
+                    shores of Lake Kivu, where azure waters mirror the surrounding hills and invite peaceful
+                    contemplation. Reflect on the nation's history at the Genocide Museum, honoring those lost and
+                    celebrating Rwanda's remarkable journey of reconciliation. Then, stand in awe of the mist-shrouded
+                    peaks of Volcanoes National Park, home to endangered mountain gorillas and captivating volcanic
+                    landscapes. Rwanda welcomes you with open arms to discover its natural wonders and embrace its
+                    spirit of resilience.
+                </p>
+
+
+
+            </section>
+            <section class="row">
+                <h3 class=" text-center">Roaring Lion Tours and Travel brings you the best travel experience</h3>
+                <p class="lead fs-5 mt-4 text-center">At Roaring Lion, we believe that travel should be more than just a
+                    vacation-it should be an immersive, transformative experience that leaves you yearning for more.
+                    That is why we have meticulously handpicked each destination and crafted unique itineraries that
+                    allow our guests to truly connect with the world around them. In addition to traditional sightseeing
+                    tours, Roaring Lion Tours and Travel offers specialty experiences such as photography safaris,
+                    culinary adventures, and eco-friendly travel options. With a focus on sustainability and responsible
+                    tourism practices, Roaring Lion Tours is committed to preserving the planets natural beauty for
+                    future generations to enjoy. As an organization, we are committed to empowering the communities that
+                    live in and around the places where we operate, therefore through our corporate social
+                    responsibility (CSR) programs we provide water and sanitation facilities to such communities. To
+                    ensure the safety and wellbeing of guests, Roaring Lion Tours and Travel has implemented rigorous
+                    health and safety protocols in accordance with global guidelines. From enhanced sanitation measures
+                    to flexible booking policies, Roaring Lion Tours and Travel is dedicated to providing a safe and
+                    worry-free travel experience for all their travelers.</p>
+
+            </section>
+            <section class="row text-black">
+                <h3 class=" text-center">Here a some of the top travel destinations</h3>
+                <p class="lead fs-5 mt-4 text-start">
+                    Explore the enchanting region of East Africa, where adventure awaits at every turn. Discover the
+                    breathtaking landscapes and diverse wildlife of this vibrant area, highlighted by the iconic Lake
+                    Nakuru in Kenya. Nestled amidst the Great Rift Valley, Lake Nakuru National Park is renowned for its
+                    shimmering waters adorned with thousands of pink flamingos, creating a mesmerizing sight to behold.
+                    Embark on a thrilling safari through the park's lush woodlands and open grasslands, where you can
+                    encounter a myriad of wildlife including rhinos, giraffes, and leopards. Immerse yourself in the
+                    natural beauty of East Africa as you explore its hidden gems and uncover the magic of Lake Nakuru
+                    and beyond.
+
+                <ul>
+                    <li><a href="/amboseli">Amboseli National Park,Kenya</a></li>
+                    <li><a href="/lakenakuru">Lake Nakuru National Park,Kenya</a></li>
+                    <li><a href="/mountkenya">Mt Kenya,Kenya</a></li>
+                    <li><a href="/serengeti">Serengeti National Park,Tanzania</a></li>
+                    <li><a href="/mountkilimanjaro">Mount Kilimanjaro,Tanzania</a></li>
+                    <li><a href="/lakenaivasha">Lake Naivasha,Kenya</a></li>
+                </ul>
+                </p>
+
+            </section>
+            <section>
+                <h4 class="display-6 text-center">We welcome you to experience the best with us</h4>
+                <p class="lead fs-5 mt-4 text-center">
+                    Roaring Lion Tours and Travel Company invites you to embark on a journey of discovery and adventure
+                    across East Africa. Specializing in bespoke safari experiences, our expert guides will lead you to
+                    the heart of the wilderness, where lions roar and elephants roam free. Click the button below to
+                    begin your adventure and request a personalized quote. Unleash your inner explorer with Roaring Lion
+                    Tours.
+                </p>
+                <div class="button-container">
+                    <a href="/requestquote">
+                        <button class="button">Request A Quote</button>
+                    </a>
+                </div>
+
+            </section>
+            <section class="row">
+                <div id="faq-container" class="faq-container lead fs-5 mt-4 text-start">
+                    <h3 class=" text-center">Roaring Lion Tours and Travel FAQ</h3>
+                    <br>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer('answer1')">1. What is a tour and travel agency?
+                        </div>
+                        <div class="faq-answer" id="answer1">- A tour and travel agency is a company or organization
+                            that specializes in providing travel-related services to individuals or groups. These
+                            services may include booking flights, accommodations, transportation, tours, and activities,
+                            as well as providing assistance with travel documentation and other logistical arrangements.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer('answer2')">2. What services do a tour and
+                            travel agency offer?</div>
+                        <div class="faq-answer" id="answer2">- Tour and travel agencies offer a wide range of services
+                            to facilitate travel experiences. These services may include booking flights, hotels,
+                            transportation (such as car rentals or transfers), arranging tours and activities, providing
+                            travel insurance, handling visa applications, and offering personalized travel advice and
+                            recommendations.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer('answer3')">3. What is a tour package?</div>
+                        <div class="faq-answer" id="answer3">- A tour package is a pre-designed travel itinerary that
+                            includes various components such as transportation, accommodations, meals, tours, and
+                            activities, offered at a fixed price. Tour packages are often tailored to specific
+                            destinations or themes and are designed to provide travelers with a convenient and
+                            hassle-free way to explore a destination, allowing them to focus on enjoying their trip
+                            without worrying about the details of planning and booking.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer('answer4')">4. What are the most popular tour
+                            packages in Kenya?</div>
+                        <div class="faq-answer" id="answer4">- Some of the most popular tour packages in Kenya include
+                            safaris to national parks and game reserves such as Maasai Mara, Amboseli, Tsavo, and
+                            Samburu. Other popular packages include beach holidays along the coast of Mombasa, cultural
+                            tours to visit tribes like the Maasai and Samburu, and adventure activities such as hiking
+                            Mount Kenya or hot air balloon safaris.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer('answer5')">5. What is the role of a tour travel
+                            operator?</div>
+                        <div class="faq-answer" id="answer5">- A tour travel operator plays a crucial role in organizing
+                            and coordinating travel experiences for clients. Their responsibilities may include
+                            designing and developing tour packages, negotiating with suppliers (such as hotels and
+                            transportation companies), managing bookings and reservations, ensuring the smooth operation
+                            of tours and activities, providing assistance and support to travelers during their trip,
+                            and handling any issues or emergencies that may arise.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer('answer6')">6. What are some of the top tour and
+                            travel destinations in Kenya?</div>
+                        <div class="faq-answer" id="answer6">- Kenya offers a diverse range of travel destinations,
+                            including iconic national parks and reserves such as Maasai Mara, Amboseli, Tsavo, and Lake
+                            Nakuru, known for their abundant wildlife and spectacular landscapes. Other popular
+                            destinations include the coastal region of Mombasa, with its beautiful beaches and vibrant
+                            culture, the scenic Rift Valley, home to attractions like Lake Naivasha and Hell's Gate
+                            National Park, and Mount Kenya, Africa's second-highest peak, offering opportunities for
+                            trekking and adventure.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer('answer7')">7. What types of adventures does
+                            Roaring Lion Tours and Travel offer?</div>
+                        <div class="faq-answer" id="answer7">- Roaring Lion Tours and Travel offers a diverse range of
+                            adventures for 2024, including exotic wildlife safaris, cultural immersion journeys, and
+                            historical explorations. Their expert guides and unparalleled service ensure unforgettable
+                            experiences for adventurers of all ages.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer('answer8')">8. How does Roaring Lion Tours and
+                            Travel prioritize sustainability and responsible tourism?</div>
+                        <div class="faq-answer" id="answer8">- Roaring Lion Tours and Travel is committed to
+                            sustainability and responsible tourism practices. They focus on preserving the planet's
+                            natural beauty for future generations and empower communities through corporate social
+                            responsibility programs, providing water and sanitation facilities to local communities.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer('answer9')">9. How does Roaring Lion Tours and
+                            Travel ensure the safety of their guests?</div>
+                        <div class="faq-answer" id="answer9">- Roaring Lion Tours and Travel prioritizes the safety and
+                            well-being of their guests by implementing rigorous health and safety protocols in
+                            accordance with global guidelines. These measures include enhanced sanitation practices and
+                            flexible booking policies, ensuring a safe and worry-free travel experience for all
+                            travelers.</div>
+                    </div>
+
+                </div>
+
+            </section>
+            <br>
+            <div id="google_translate_element"></div>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'af,am,ar,az,be,bg,bn,bs,ca,ceb,co,cs,cy,da,de,el,en,eo,es,et,eu,fa,fi,fr,fy,ga,gd,gl,gu,ha,haw,hi,hmn,hr,ht,hu,hy,id,ig,is,it,iw,ja,jw,ka,kk,km,kn,ko,kk,ku,ky,la,lb,lo,lt,lv,mg,mi,mk,ml,mn,mr,ms,mt,my,ne,nl,no,ny,or,pa,pl,ps,pt,ro,ru,rw,si,sk,sl,sm,sn,so,sd,st,su,sv,sw,ta,te,tg,th,tl,tr,uk,ur,uz,vi,xh,yi,yo,zh-CN,zh-TW,zh,zu',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false,
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+            <script>
+                // JavaScript to toggle FAQ answers
+                const faqQuestions = document.querySelectorAll('.faq-question');
+
+                faqQuestions.forEach(question => {
+                    question.addEventListener('click', () => {
+                        const answer = question.nextElementSibling;
+                        answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+                    });
+                });
+            </script>
+
+        </div>
+        
+        {% include "footer.html" %}
+    </body>
+
+</html>

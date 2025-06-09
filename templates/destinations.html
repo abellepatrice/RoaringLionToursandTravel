@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Destination</title>
+        <title>Tours</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/css/lightslider.css">
+        <link rel="stylesheet" href="../static/css/style.css">
+        <link rel="stylesheet" href="../static/css/fontawesome.min.css">
+        <link rel="website icon" type="png" href="../static/images/logo3.png">
+   
+        <script src="../static/js/bootstrap.bundle.min.js"></script>
+        <script src="../static/js/jquery.js"></script>
+        <script src="../static/js/lightslider.js"></script>
+        <script src="../static/js/script.js"></script>  
+        <style>
+            
+            .button-container {
+                text-align: center;
+            }
+            
+            .button {
+                /* Add your button styles here */
+                /* Example styles */
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #62583B;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                font-size: 16px;
+                border-radius: 4px;
+                border: none;
+                cursor: pointer;
+            }
+            
+        </style>
+         <style>
+            .faq-container {
+                max-width: 1300px;
+                margin: 50px auto;
+                padding: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            .faq-question {
+                cursor: pointer;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            .faq-answer {
+                display: none;
+                margin-bottom: 20px;
+            }
+        </style>
+    
+      
+    </head>
+    <body>
+        {% include "navbar.html"%}
+
+    <div class="container-fluid">
+                  <h2 class="text-center display-4">Here are the best travel destinations in East Africa</h2>
+                  <p class="lead fs-5 mt-4 text-center">Roaring Lion Tours and Travel, a distinguished travel agency, proudly presents an exceptional selection of destinations across Kenya, Uganda, Tanzania, and Rwanda. Embark on a captivating adventure through Kenya's diverse landscapes, from the iconic Amboseli National Park with its majestic elephants to the serene beauty of Lake Nakuru. In Uganda, witness the awe-inspiring power of the Murchison Falls and explore its abundant wildlife. Tanzania awaits with the legendary Serengeti National Park, where the annual Great Migration unfolds, and the towering splendor of Mount Kilimanjaro, Africa's highest peak. Meanwhile, Rwanda offers the unique opportunity to encounter endangered mountain gorillas in the lush Volcanoes National Park. With Roaring Lion Tours and Travel, your journey through these extraordinary destinations promises unforgettable experiences, cultural immersion, and a deeper connection with the natural world. Let us guide you on the adventure of a lifetime to enjoy, request a quote by clicking the button below.</p>
+            <!-- <h2>Kenya</h2> -->
+            <div class="button-container">
+                <a href="/requestquote">
+                    <button class="button">Request A Quote</button>
+                </a>
+            </div>
+            <br>
+            <section class="row">
+                <div class="col-md-3">
+                    <div class="card-shadow">
+                        <a href="/amboseli">
+                            <img src="../static/images/amboseli1.jpg" alt="" width="310px" height="300">
+                        </a>
+                        <h5>Amboseli National Park</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-shadow">
+                        <a href="/nairobinationalpark" width="430" height="300">
+                                <img src="../static/images/nairobinationalpark.jpg" alt="sunsetXlion.jpg"  width="310px" height="300">
+                        </a>
+                        <h5>Nairobi National Park</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-shadow">
+                        <a href="southisland">
+                            <img src="../static/images/southislandnationalpark.jpg" alt="" width="310px" height="300">
+                        </a>
+                        <h5>South Island National Park</h5>
+                     </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-shadow">
+                        <a href="/mountkenya">
+                            <img src="../static/images/mountkenya.jpg" alt=""  width="310px" height="300">
+                        </a>
+                        <h5>Mount Kenya</h5>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <section class="row">
+                
+                <div class="col-md-3">
+                    <div class="card-shadow">
+                        <a href="/sibiloi">
+                               <img src="../static/images/sibiloi.jpg" alt="" width="310px" height="300">
+                        </a>
+                        <h5>Sibiloi National Park</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-shadow">
+                        <a href="/lakenakuru" >
+                                <img src="../static/images/lakenakuru.jpg" alt="sunsetXlion.jpg"  width="310px" height="300">
+                        </a>
+                        <h5>Lake Nakuru National Park</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-shadow">
+                        <a href="/serengeti">
+                            <img src="../static/images/serengeti.jpg" alt=""  width="310px" height="300">
+                        </a>
+                        <h5>Serengeti National Park</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-shadow">
+                        <a href="/mountkilimanjaro" width="430" height="300">
+                                <img src="../static/images/mountkilimanjaro.jpg" alt="sunsetXlion.jpg"   width="310px" height="300">
+                        </a>
+                        <h5>Mt.Kilimanjaro</h5>
+                    </div>
+                </div>
+            </section>
+
+<!-- 
+                <h3>South Island National Park -The Isle of Mystery</h3>
+                     <p>Covered end to end in volcanic ash, the nightly glow of its South Island’s luminous vents has inspired
+                        numerous tales of ghosts and evil spirits. The island is home to a profusion of birdlife including 34
+                        species of European migrants most spectacularly viewed as they return home between March and May. At
+                        least 23 species breed here, including Goliath heron, and African skimmer, while African open-billed
+                        stork, Duck and Gulls feed on the shores and the volcanic island lakes attract lesser flamingos. Birds
+                        of prey are also abundant, especially swallow-tailed kites. This park is ideal for game watching and has
+                        one of the world’s largest concentrations of crocodiles.
+                    </p> -->
+<!-- 
+                <h3>Mt. Kenya - Touch the sky</h3>
+                    <p>Climbing to 5,199 meters, Mount Kenya is the second tallest mountain in Africa. The scenery surrounding
+                        this designated World Heritage Site is breath-taking. It is pristine wilderness with lakes, tarns,
+                        glaciers, dense forest, mineral springs and a selection of rare and endangered species of animals, high
+                        altitude adapted plains game and unique montane and alpine vegetation. Visitors can enjoy mountain
+                        climbing, camping and caving with the mountain’s rugged glacier-clad peaks providing the perfect
+                        backdrop.
+                    </p> -->
+<!-- 
+                <h3>Sibiloi National Park – The cradle of mankind</h3>
+                    <p>This park is located on the wild and rugged shores of Lake Turkana and is home to important
+                        archaeological sites including Koobi Fora where the fossil remains have contributed more to the
+                        understanding of human evolution than any other site on the continent. The area is characterized by
+                        semi-desert habitat and open plains flanked by volcanic formations including Mount Sibiloi, where the
+                        remains of a petrified forest can be seen.
+                    </p>  -->
+                 <!-- </p>
+                <h3>Lake Nakuru National Park</h3>
+                    <p>On the floor of the Great Rift Valley, surrounded by wooded and bushy grassland, lies the beautiful Lake
+                        Nakuru National Park. Visitors can enjoy the wide ecological diversity and varied habitats that range
+                        from Lake Nakuru itself to the surrounding escarpment and picturesque ridges. Lake Nakuru National Park
+                        is ideal for bird watching, hiking,picnic and game drives. -->
+                    <!-- </p>  -->
+       
+        </section>
+
+            <!-- <h2>Tanzania</h2> -->
+            <!-- <section class="row">
+                
+                
+            </section> -->
+            <section class="row">
+                <div class="col-md-3">
+                    <div class="card-shadow">
+                        <a href="/lakemanyara">
+                            <img src="../static/images/lakemanyara.jpg" alt=""   width="310px" height="300">
+                        </a>
+                        <h5>Lake Manyara National Park</h5>
+                     </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-shadow">
+                        <a href="/ngorongorocrater">
+                            <img src="../static/images/ngorongoro.jpg" alt=""  width="310px" height="300">
+                        </a>
+                        <h5>Ngorongoro Crater</h5>
+                     </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-shadow">
+                        <a href="/tarangire">
+                            <img src="../static/images/tarangire.jpg" alt=""  width="310px" height="300">
+                        </a>
+                        <h5>Tarangire National Park</h5>
+                     </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-shadow">
+                        <a href="/akagera">
+                            <img src="../static/images/akagera1.jpeg" alt=""   width="310px" height="300">
+                        </a>
+                        <h5>Akagera National Park</h5>
+                     </div>
+                </div>
+               
+            </section>
+            <!-- <h2>Rwanda</h2> -->
+            <section class="row">
+                
+                <div class="col-md-3">
+                    <div class="card-shadow">
+                        <a href="/nyungwe">
+                            <img src="../static/images/nyungwe.jpg" alt=""  width="310px" height="300">
+                        </a>
+                        <h5>Nyungwe National Park</h5>
+                     </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-shadow">
+                        <a href="/lakekivu">
+                            <img src="../static/images/lakekivu.jpg" alt=""  width="310px" height="300">
+                        </a>
+                        <h5>Lake Kivu</h5>
+                     </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-shadow">
+                        <a href="/genocidemuseum">
+                            <img src="../static/images/genocidemuseum1.jpg" alt=""  width="310px" height="300">
+                        </a>
+                        <h5>Genocide Museum</h5>
+                     </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-shadow">
+                        <a href="/volcanoesnationalpark">
+                            <img src="../static/images/volcanoesnationalpark.jpg" alt=""  width="310px" height="300">
+                        </a>
+                        <h5>Volcanoes National Park</h5>
+                     </div>
+                </div>
+            </section>
+            <!-- <section class="row">
+                
+                
+            </section> -->
+            <br>
+            <section class="row">
+                <!-- <h2>Uganda</h2> -->
+                <div class="col-md-3">
+                    <div class="card-shadow">
+                        <a href="/queenelizabeth">
+                            <img src="../static/images/queenelizabethnationalpark.jpg" alt="" width="310px" height="300">
+                        </a>
+                        <h5>Queen Elizabeth National Park</h5>
+                     </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-shadow">
+                        <a href="/murchisonfalls">
+                            <img src="../static/images/murchison falls.jpg" alt=""  width="310px" height="300">
+                        </a>
+                        <h5>Murchison Falls</h5>
+                     </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-shadow">
+                        <a href="/bwindiforest">
+                            <img src="../static/images/bwindiforest.jpg" alt=""  width="310px" height="300">
+                        </a>
+                        <h5>Bwindi Impenetrable Forest</h5>
+                     </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-shadow">
+                        <a href="/kidepovalley">
+                            <img src="../static/images/kidepovalley.jpg" alt=""width="310px" height="300">
+                        </a>
+                        <h5>Kidepo Valley</h5>
+                     </div>
+                </div>
+            </section>
+            <h2 class="text-center display-6">Kenya</h2>
+                <p class="lead fs-5 mt-4 text-start">Kenya, located in East Africa, is renowned for its diverse landscapes, abundant wildlife, and rich cultural heritage. From the iconic Maasai Mara National Reserve to the pristine beaches of the Kenyan coast, Kenya offers a wealth of experiences for travelers.
+                    Embark on a safari adventure in the Maasai Mara, where you can witness the Great Migration, an awe-inspiring spectacle of millions of wildebeest, zebras, and other animals crossing the plains in search of greener pastures. <br> Explore the Amboseli National Park, known for its large herds of elephants and stunning views of Mount Kilimanjaro, Africa's highest peak.
+                    For cultural immersion, visit traditional Maasai villages and learn about their fascinating way of life. Discover the vibrant culture and history of coastal cities like Mombasa and Lamu, known for their Swahili architecture, bustling markets, and rich maritime heritage.<br>
+                    Explore the Rift Valley region, home to scenic landscapes, lakes, and national parks such as Lake Nakuru National Park, famous for its flamingos, and Hell's Gate National Park, where you can hike, rock climb, and enjoy stunning geothermal features.
+                    Kenya's coastline offers pristine beaches and marine parks, including Diani Beach and Watamu Marine National Park, where you can snorkel, dive, and relax on white sandy beaches.
+                    With its diverse attractions and warm hospitality, Kenya promises unforgettable experiences for adventurers, nature lovers, and culture enthusiasts alike.
+                </p>
+
+            <br>
+            <h2 class="text-center display-6">Uganda</h2>
+                    <p class="lead fs-5 mt-4 text-start">Uganda also known as the “The Pearl of Africa” is a lush and green country in East Africa that has so
+                        much to offer. Its diverse landscape encompasses the snow-capped “Mountains of the Moon”, the Rwenzori
+                        Mountains and the continent’s largest fresh water lake, Lake Victoria, known as the “Source of the
+                        Nile”. <br>
+                    
+                        It also has many different species of wildlife including habituation of chimpanzees and “wild chimps” as
+                        well as many rare bird species. It truly is a “birder’s paradise” ! There are 10 gazetted National Parks
+                        which are all quite varied, ranging from those located near / within the large water bodies including
+                        the mighty “NILE” to Savannah type of vegetation in the Kidepo National Park and the evergreen
+                        Rainforests boasting various primates with the most popular ones being Gorillas and Chimpanzees. Kidepo
+                        is the only park that hosts cheetahs.
+                        The Bwindi Impenetrable National Park is renowned for the endangered Mountain Gorilla, one of the last
+                        refuges for these beautiful giants in their natural habitat. A visit to Murchison Falls National Park
+                        with 43m-tall waterfall of River Nile is a must whilst visiting. Enjoy a river cruise to view hippos up
+                        close and enjoy this spectacular waterfall between massive rocks. Uganda is known for its diverse
+                        culture, warm hospitality and freshest organic tropical fruit you can eat.
+                    </p>
+                    <br>
+                <h2 class="text-center display-6">Tanzania</h2>
+                    <p class="lead fs-5 mt-4 text-start">Tanzania, located in East Africa, is a land of breathtaking landscapes and diverse wildlife. Home to iconic destinations such as the Serengeti National Park, known for its vast plains and the Great Migration, and Mount Kilimanjaro, Africa's highest peak offering adventurous trekking experiences, Tanzania has something for every traveler.<br>
+                        Explore the Serengeti's endless savannahs teeming with wildlife, including lions, elephants, and giraffes, and witness the awe-inspiring spectacle of the Great Migration, where millions of wildebeest and other animals cross the plains in search of greener pastures.<br>
+                        For nature lovers, the Ngorongoro Crater, a UNESCO World Heritage Site, offers an unparalleled wildlife viewing experience within its ancient volcanic caldera. Discover the rich biodiversity of the tropical rainforests in Gombe Stream National Park and Mahale Mountains National Park, home to chimpanzees and other primates.<br>
+                        Tanzania's coastline along the Indian Ocean is dotted with idyllic islands and pristine beaches, such as Zanzibar and Mafia Island, where you can relax on white sandy beaches, snorkel in crystal-clear waters, and immerse yourself in the island's rich cultural heritage.<br>
+                        With its diverse landscapes, abundant wildlife, and warm hospitality, Tanzania promises unforgettable experiences for travelers seeking adventure, relaxation, and cultural immersion.
+                    </p>
+
+                    <br>
+                <h2 class="text-center display-6">Rwanda</h2>
+                    <p class="lead fs-5 mt-4 text-start">Known as ‘The Land of a Thousand Hills’, Rwanda has so much to offer from its magnificent scenery to
+                    unique experiences. Rwanda’s people are warm & humble and you won’t forget this beautiful country, nor
+                    its people ! But the most fascinating inhabitants of this land, are one third of the world’s remaining
+                    population of endangered Mountain Gorillas, the rarest of the three gorilla sub-species.
+                    <br>
+                    People from all over the world come to catch a glimpse of the magnificent gorillas and golden monkeys.
+                    There are only about 820 gorillas remaining in the Wild. There is no doubt that this is an experience
+                    you will be forever etched in your memory.
+                    <br>
+                    One of the advantages of visiting Rwanda is the close proximity of all the main attractions. Most are
+                    located between one and four hours from the capital city of Kigali. From rainforests and volcanoes at
+                    the Volcanoes National Park & Nyungwe Forest National Park, to the low-lying savannah of the Akagera
+                    National Park to the forests of Nyungwe National Park and beautiful Lake Kivu.
+                    <br>
+                    You may wish to visit the lush and green Nyungwe Forest, home to many species of chimpanzees and Colobus
+                    monkeys. The Canopy Walkway offers stunning views over the valley and forests. Visit the Kamiranzovu
+                    Marsh, with its birdlife, orchids and waterfall.
+                </p> 
+                <br>
+
+            <section class="row">
+                <div id="faq-container" class="faq-container lead fs-5 mt-4 text-start">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer('answer1')">1. Best safari destination?</div>
+                        <div class="faq-answer" id="answer1">- Some of the best safari destinations in East Africa include the Serengeti National Park in Tanzania and the Maasai Mara National Reserve in Kenya. These areas are renowned for their incredible wildlife sightings, including the Great Migration, where millions of animals traverse the plains in search of greener pastures.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer('answer2')">2. Best time to visit East Africa?</div>
+                        <div class="faq-answer" id="answer2">- The best time to visit East Africa depends on your interests. Generally, the dry season (June to October) is ideal for wildlife viewing as animals gather around water sources. However, the wet season (November to May) offers lush landscapes, fewer crowds, and the chance to witness the Great Migration in Tanzania's Serengeti or Kenya's Maasai Mara.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer('answer3')">3. Popular places to visit in East Africa?</div>
+                        <div class="faq-answer" id="answer3">- Explore iconic destinations like Maasai Mara National Reserve, Serengeti National Park, Zanzibar, Mount Kilimanjaro, Bwindi Impenetrable National Park, Victoria Falls, and Ngorongoro Conservation Area for diverse wildlife, stunning beaches, majestic waterfalls, and thrilling trekking experiences.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer('answer4')">4. Top national parks and reserves in East Africa?</div>
+                        <div class="faq-answer" id="answer4">- Some of the top national parks and reserves in East Africa include Serengeti National Park and Ngorongoro Conservation Area in Tanzania, Maasai Mara National Reserve and Amboseli National Park in Kenya, and Bwindi Impenetrable National Park and Queen Elizabeth National Park in Uganda.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer('answer5')">5. Best places to visit in Kenya?</div>
+                        <div class="faq-answer" id="answer5">- Kenya offers a diverse range of attractions, including Maasai Mara National Reserve for exceptional wildlife viewing, Amboseli National Park for stunning views of Mount Kilimanjaro and large herds of elephants, and Diani Beach for its white sandy beaches and water sports activities.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer('answer6')">6. Best places to visit in Tanzania?</div>
+                        <div class="faq-answer" id="answer6">- Tanzania is home to remarkable destinations such as Serengeti National Park, renowned for its vast plains and the Great Migration, Mount Kilimanjaro, offering unforgettable trekking experiences, and Zanzibar, an idyllic island paradise with beautiful beaches, rich history, and vibrant culture.</div>
+                    </div>
+                </div>
+            </section>
+            <script>
+                // JavaScript to toggle FAQ answers
+                const faqQuestions = document.querySelectorAll('.faq-question');
+            
+                faqQuestions.forEach(question => {
+                    question.addEventListener('click', () => {
+                        const answer = question.nextElementSibling;
+                        answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+                    });
+                });
+            </script>
+            
+                <!-- <h3>Serengeti National Park</h3>
+                    <p>The Serengeti National Park was established nearly a hundred years ago as a colonial game reserve, made
+                        a National Park in 1951, and later endorsed as a UNESCO World Heritage Site in 1979. Tanzania's oldest
+                        and most popular national park was recently proclaimed a 7th world wide wonder.
+                        The Serengeti is famed for its annual migration, when some six million hooves pound the open plains, as
+                        more than 200,000 zebra and 300,000 Thomson's gazelle join the wildebeest’s trek for fresh grazing. Yet
+                        even when the migration is quiet, the Serengeti offers arguably the most scintillating game-viewing in
+                        Africa: great herds of buffalo, smaller groups of elephant and giraffe, and thousands upon thousands of
+                        eland, topi, kongoni, impala and Grant’s gazelle.
+                        The geography of the area ranges from apparently limitless grass plains in the south, fertilized by
+                        volcanic ash rich in life-giving phosphates, to wooded highlands in the east, crossed by rivers and
+                        studded with island outcrops or kopjes of eroded granite, home to hundreds of vulnerable inhabitants
+                        such as the rare black rhinoceros.
+                    </p> 
+                <h3>Ngorongoro Crater</h3>
+                    <p>The Ngorongoro Crater is one of Africa’s most famous sites and is said to have the highest density of
+                        wildlife in Africa. Sometimes described as an ‘eighth wonder of the world’, The Ngorongoro Crater is the
+                        world’s largest intact volcanic caldera. Forming a spectacular bowl of about 265 square kilometres, with
+                        sides up to 600 metres deep; it is home to approximately 30,000 animals at any one time.
+                        The Crater rim is over 2,200 metres high and experiences its own climate. From this high vantage point
+                        it is possible to make out the tiny shapes of animals making their way around the crater floor far
+                        below. Swathes of cloud hang around the rocky rim most days of the year and it’s one of the few places
+                        in Tanzania where it can get chilly at night.<br>
+                        The crater floor consists of a number of different habitats that include grassland, swamps, forests and
+                        Lake Makat (Maasai for ‘salt’) – a central soda lake filled by the Munge River. All these various
+                        environments attract wildlife to drink, wallow, graze, hide or climb.
+                        You are unlikely to escape other vehicles here, but you are guaranteed great wildlife viewing in a
+                        genuinely mind-blowing environment. There is nowhere else in Africa quite like Ngorongoro!
+                    </p> 
+
+                <h3>Lake Manyara National Park</h3>
+                    <p> This park offers a wilderness experience in diverse habitats, from its Rift Valley soda
+                        lake to dense woodlands and steep mountainsides. Apart from a spectacular setting, the park is famous
+                        for its unusual tree-climbing lions and the vast elephant herds it was established to protect.
+                        The shores of the lake, encrusted with pink flamingo, attract more than 400 species of birds, many of
+                        them waterfowl or migrants. Large herds of buffalo, cheetah, Masai giraffe and impala roam the lake
+                        shores and the forested valley slopes. <br>
+                        A Lake Manyara safari is a fascinating experience, as the park also features a ground-water forest,
+                        acacia tortilis woodland and hot springs called Maji Moto. Troops of several hundred olive baboon appear
+                        alongside Sykes monkey and short-eared galago. Cape clawless otter, Egyptian mongoose, hippo and
+                        klipspringer are other park residents.
+                    </p>
+
+                <h3>Tarangire National Park</h3>
+                    <p>Tarangire is one of Africa’s little-known gems and a must for any northern circuit itinerary.
+                        Boasting a variety of wildlife as diverse as its landscape, Tarangire is also the park that can boast
+                        being home to Tanzania’s largest population of African elephants. With four of the Big Five also
+                        residing within the park, it is a great spot for a day trip from Arusha or as an addition to a
+                        Serengeti/Ngorongoro centred itinerary.
+                        Named after Tarangire River which flows through it, the park is an excellent choice during the dry
+                        season when animals are forced to move closer and closer to the river in search of water. Set against a
+                        backdrop of majestic baobab trees and twisted acacia, it makes for a beautiful experience.
+                    </p>
+            
+
+
+                <h3>Akagera National Park</h3>
+                    <p>Akagera National park is nestled in the east of the country, bordering Tanzania. The relatively warm and
+                        low-lying plains of Akagera comprise savannah, woodland, wetland and a dozen lakes, the largely open
+                        expanse is ideal for game viewing. A family of lions from South Africa is settling in well, and breeding
+                        successfully, and 18 eastern black rhinos have also been reintroduced. Visitors can also encounter
+                        buffalo, elephant, antelope, zebra, giraffe, baboons, monkeys and an incredible 490 bird species. A boat
+                        trip on Lake Ihema is also a highlight of any visit to Akagera, with its large pods of hippos, Nile
+                        crocodiles and abundant water birds on the island in the middle of the lake. The only way to explore the
+                        park is by vehicle.
+                    </p>
+
+                <h3>Nyungwe Forest</h3>
+                    <p>Nyungwe Forest national park is home to 25% of all of Africa's primates, including a large population of
+                        chimpanzees, which produce the national park's main attraction: chimpanzee trekking. Set in the
+                        Southwest of the country, this is one of the oldest rainforests in Africa, Rich in biodiversity, with
+                        regular rainfalls of up to 2,000mm per annum. The region is teaming with wildlife, including a healthy
+                        number of Ruwenzori Colobus monkeys, Hoest’s monkey, chimpanzee, silver monkey, golden monkey, olive
+                        baboon, Vervet monkey, several species of bush baby, grey-cheeked mangabey and red-tailed monkey.
+                        The forest is situated in a region where several large-scale bio-geographical zones meet and provide a
+                        great span of micro-habitats for many different species of plants and animals. The park contains 13
+                        different primate species, over 300 bird species, 1068 plant species, 85 mammal species, 32 amphibian
+                        and 38 reptile species. Botanists will marvel at the plant species and over 140 orchids found in
+                        Nyungwe. The bird watching is among the best in Africa with over 300 species including the Red-collared
+                        Babbler and 29 other Albertine Rift Endemic species. With 15 trails and various other activities,
+                        visitors will be spoilt for choice by what this forest has to offer. <br>
+                        Memorable and photogenic moments include walking up to the Isumo waterfall or along the Canopy Walk
+                        suspension bridge. The 160m long and 70m high suspension bridge is accessible as part of a guided tour
+                        and is only advisable for children older than 6 years old. This is East Africa’s highest canopy walk.
+                        This park is undoubtedly one of the country’s main attractions with waterfalls, abundant wildlife and
+                        viewpoints over the tranquil scenery. <br>
+                        Along with its biodiversity, Nyungwe is an important water catchment for Rwanda and contains many
+                        natural resources integral to Rwanda’s human populations.
+                    </p>
+
+                <h3>Lake KIVU</h3>
+                    <p>This lively and picturesque lake sits on the border between Rwanda and the Democratic Republic of Congo,
+                        consuming nearly half of the Rwandan border itself. The resort town is a great place for swimming and
+                        water sport activities, making it an ideal place to relax after your gorilla trek. Over 31 species of
+                        fish have been found in the lake. The deep waters of Lake Kivu, are bursting with vast quantities of
+                        three dissolved gases - carbon dioxide & hydrogen sulphide (largely from the volcanic activity) and
+                        methane (from the lake bed bacteria).
+                    </p>                
+
+
+                <h3>Genocide Museum</h3>
+                    <p>No visit to Rwanda would be complete without a visit to the Kigali Genocide Memorial Centre, or
+                        ‘Gisozi’. This is where 250,000 victims from the 1994 genocide were buried. The three permanent
+                        exhibitions and burial gardens form part of a meaningful tribute to those who perished, and provide a
+                        powerful educational tool for visitors. https://www.kgm.rw/
+                    </p> 
+                
+
+                <h3>Volcanoes National Park</h3>
+                    <p>The Volcanoes National Park is situated in the far northwest of Rwanda. Covering an area of 8,000
+                        kilometers square, this stunning area protects five of the nine staggeringly beautiful Virunga
+                        Mountains, each characterized by steep slopes that are blanketed in thick green, tropical rainforest,
+                        bamboo forest, open grassland, swamp and heath. <br>
+                        The park is home to five of habituated mountain gorilla families. You will spend between 3-10 hours
+                        tracking one of the official gorilla family groups through hillside paths, sometimes crawling through
+                        dense vegetation which can at times be difficult. Only 38 visitor permits are available daily, in order
+                        to conserve the habitat. This makes early booking essential to avoid disappointment. Tracking the
+                        endangered mountain gorillas through the mysterious intimacy of the rain forest, alive with the calls of
+                        200 species of colorful birds and chattering of the rare golden monkey, is only one of the truly unique
+                        experiences in the area. <br>
+                        Within the boundaries of Volcanoes National Park is the Buhanga Eco-Park, an ancient forest holding
+                        Rwanda’s most intriguing folklore. The forest is an isolated ritual place where the kings of Rwanda
+                        would be initiated and enthroned for kingship. The Musanze Caves, formed 62 million years ago after the
+                        last estimated volcanic eruption, is another geological site. These caves go 2km and are covered in the
+                        lush greenery. This beautiful vegetation around the caves make for good photography. <br>
+                        Other activities in this park include tracking the golden monkeys, climbing one of the volcanic peaks or
+                        visiting the grave of Dian Fossey, one of the most iconic primate researchers of our time who was known
+                        for her study of the behavior of Rwanda’s majestic mountain gorillas.
+                    </p> 
+
+                
+
+                <h3>Queen Elizabeth National Park</h3>
+                    <p>This is one of the oldest and largest National Parks in Uganda measuring 3,840km2. It boasts over 76
+                        species of mammals and 451 birds. Set against the backdrop of the jagged Rwenzori Mountains, the park’s
+                        magnificent vistas include dozens of enormous craters carved dramatically into rolling green hills,
+                        panoramic views of the Kazinga Channel with its banks lined with hippos, buffalo and elephants, and the
+                        endless Ishasha plains, whose fig trees hide lions ready to pounce on herds of unsuspecting Uganda kob.
+                        This park is arguably one of Uganda’s best park with a variety to offer ranging from river cruises along
+                        the River Nile to Chimpanzee tracking in the nearby Budongo Forest alongside the game drives within the
+                        park on the Savannah grasslands. Wildlife include elephant, lion, Cape buffalo, Rothschild’s giraffe,
+                        hartebeest, Oribi, bushbuck, Uganda Kob, Bohor reedbuck, spotted hyena and if lucky you could even spot
+                        the leopard amongst others.
+                        This park has two distinctive parts i.e. the northern section of the park contains savanna and borassus
+                        palms, acacia trees and riverine woodland which is an excellent area for game viewing while the south is
+                        dominated by woodland and forest patches extending to the Budongo Forest where Chimps tracking takes
+                        place.
+                    </p> 
+
+                <h3>Murchison falls National Park</h3>
+                    <p>Murchison Falls National Park lies at the northern end of the Albertine Rift Valley, where the sweeping
+                        Bunyoro escarpment tumbles into vast, palm-dotted savanna. First gazetted as a game reserve in 1926, it
+                        is Uganda's largest and oldest conservation area, hosting 76 species of mammals and 451 birds.
+                        The park is bisected by the Victoria Nile, which plunges 45m over the remnant rift valley wall, creating
+                        the dramatic Murchison Falls, the centerpiece of the park and the final event in an 80km stretch of
+                        rapids. The mighty cascade drains the last of the river's energy, transforming it into a broad, placid
+                        stream that flows quietly across the rift valley floor into Lake Albert. This stretch of river provides
+                        one of Uganda's most remarkable wildlife spectacles. Regular visitors to the riverbanks include
+                        elephants, giraffes and buffaloes; while hippos, Nile crocodiles and aquatic birds are permanent
+                        residents. <br>
+                        The major tourist activities in the park include game viewing typically around the delta circuit,
+                        chimpanzee tracking in the Budongo Forest, Launch cruise along the Nile to the bottom of the falls
+                        rewards you with sights of a diversity of bird species as well as wildlife, and there is also an
+                        interesting walk to the top of the falls.
+                        <br>
+                        You can either begin or end your day with a river cruise along the mighty Nile that boasts some of the
+                        largest crocodiles in the entire continent. The fit ones or “adventurous ones” can combine the river
+                        cruises with a 1.5 hrs hike to the top of the falls for better views of the falls. At Murchison Falls,
+                        the Nile squeezes through an 8m wide gorge and plunges with a thunderous roar into the "Devil's
+                        Cauldron", creating a trademark rainbow.
+                    </p> 
+
+                <h3>Bwindi Impenetrable Forest</h3>
+                    <p> This can easily be described as Uganda’s most popular park as a Gorilla Trekking base. It is referred to
+                        as Impenetrable due to its thick forestation that makes accessibility of the park’s interior difficult.
+                        It was declared a UNESCO Natural World Heritage site in 1994 protecting about half of the world’s
+                        mountain Gorilla population. It is however quite small in size covering about 321 km². Bwindi boasts 17
+                        habituated Gorilla Families split in four bases around the park. Viewing is limited to 8 people per
+                        family and for a maximum of 1 hour.
+                    </p>  
+            
+                <h3>Kidepo valley</h3>
+                    <p>This is truly one of Uganda’s finest parks enjoying savannah type of climate and boasting a variety of
+                        wildlife. Most important is that it is the only park in the Country where you find cheetahs amongst
+                        other 77 species of mammals. Due to its distant location about 700 Kms from its capital it is best
+                        accessed by flights. During the dry season all rivers dry up leaving remnant pools making this season a
+                        prime game viewing period as wildlife gather to quench thirst. There are few tourists who make it here
+                        and can agree this is a hidden treasure. The local tribe found here is known as the Karamajong a Nilotic
+                        group that has retained most of its culture till today and would be worth a visit.
+                    </p>  -->
+
+                 <!-- <h4>Covid-19 Safety Protocols</h4>
+                <p>Roaring Lion Tours has put in place measures in line with the Ministry of Health guidelines to ensure
+                safety of our guests. The following therefore are the COVID-19 SAFETY and MANAGEMENT PROTOCOLS that you
+                can expect during your travel with us:
+                    <ul type="disc">
+                        <li>Sanitization of both your hands and luggage.</li>
+                        <li>Maintain 1.5 Metres Distance from other tour groups always.</li>
+                        <li>Visual observation of COVID-19 symptoms.</li>
+                        <li>Wear mask at all times during the journey.</li>
+                        <li>Provide COVID-19 free certificate for verification</li>
+                        <li>You will be provided with the Ministry of health hotline numbers for any health emergency.</li>
+                    </ul>
+                </p>
+                <p>During Tour/Safari
+                    <ul type="disc">
+                        <li>Wash your hands frequently with soap and water or use hand sanitizer at the beginning, during and at
+                            the end of the tour, after going to the bathroom, before and after eating and after touching your face
+                            or hair</li>
+                        <li>Maintain 1.5 Metres Distance from other tour groups always.</li>
+                        <li>Avoid touching your eyes, mouth and nose.</li>
+                        <li>Use the provided stickers to mark your water bottles.</li>
+                        <li>Avoid sharing things such as goggles, caps, binoculars or sanitize regularly.</li>
+                        <li>Report immediately if you feel unwell before, during or after the tour.</li>
+                        <li>Any participant who is unwell with symptoms such as sore throat, runny or blocked nose should stay at
+                            home and not attend tours.</li>
+                        <li>Disembarking will take place only at designated points.</li>
+                        <li>Pick up of guests for tours will be done from an approved accommodation provider, cruise port,
+                            licensed tour operator or designated tour point only.</li>
+                    </ul>
+                    </p>
+                <p>General protocols
+                    <ul type="disc">
+                        <li>The tour vehicle will be sanitized after every disembarking</li>
+                        <li>Hand sanitizer and sanitizing wipes available for use inside the vehicle.</li>
+                        <li>Additional face masks available in the vehicle.</li>
+                        <li>The vehicle is allowed to carry a maximum of seven (7) guests only in line with the Ministry of health
+                            guideline of 1.5</li>
+                        <li>Meters distance.</li>
+                    </ul>
+                <h5>Payments</h5>
+                <p>We encourage our guests to use cashless payment technologies
+                to avoid contacts with solid cash. These technologies include:
+                    <ul type="circle">
+                        <li>Cash transfers.</li>
+                        <li>Internet banking</li>
+                        <li>Credit cards</li>
+                        <li>Mobile banking</li>
+                </ul>
+                <p> -->
+
+            </section>
+        </div>   
+        </div>{% include "footer.html" %}
+        <br>
+
+    </body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamu</title><link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/lightslider.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/fontawesome.min.css">
+    <link rel="website icon" type="png" href="../static/images/logo3.png">
+
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/jquery.js"></script>
+    <script src="../static/js/lightslider.js"></script>
+    <script src="../static/js/script.js"></script>
+    <style>
+        .button-container {
+            text-align: center;
+        }
+        
+        .button {
+            /* Add your button styles here */
+            /* Example styles */
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #62583B;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+        }
+        
+    </style>
+
+</head>
+<body>
+    {% include "navbar.html" %}
+    <div class="container-fluid">
+        <section class="row">
+            <h2>Lamu</h2>
+            <p>Lamu is a small island off the north-east coast of Kenya. It is the oldest living Swahili
+                town south of the sahara, and this has earned it recognition as a world heritage site
+                by UNESCO. The small island is rich with history and culture and is surrounded by
+                turquoise seas, dotted with dhow masts in the distance. The only means of transport
+                on the island are by foot or donkey. A small channel separates the island from the
+                mainland. Lamu has warm friendly people and features diverse accommodation. The
+                Swahili architecture, fishing villages, mosques and winding streets in the old
+                fashioned stone town, rolling dunes and endless beaches make Lamu a true gem.
+                Visitors can also experience culture through the annual festivals that take place
+                throughout the year including, the Lamu cultural festival, Lamu Art festival and the
+                Lamu yoga festival.
+            </p>
+
+        </section>
+        <br>
+        <section class="row">
+            <h3>Location</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127558.1090402573!2d40.58822784335937!3d-2.4433881999999962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1816fb9a04395e87%3A0xe60f9e27dec21e2a!2sWaridi%20Beach%2CLamu%20Mainland!5e0!3m2!1sen!2ske!4v1714491421981!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </section>
+        <br>
+        <div class="button-container">
+            <a href="/requestquote">
+                <button class="button">Request A Quote</button>
+            </a>
+        </div>
+        <br>
+        <hr>
+    </div>
+    {% include "footer.html" %}
+</body>
+</html>
